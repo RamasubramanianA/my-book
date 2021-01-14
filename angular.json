@@ -106,5 +106,8 @@
       }
     }
   },
-  "defaultProject": "my-book"
+  "defaultProject": "my-book",
+  "cli": {
+    "analytics": "9b32c6ae-a662-4e65-90a2-1de39d2e0339"
+  }
 }
