@@ -9,13 +9,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 
 import { RouterModule, Routes } from '@angular/router';
+import { HomeComponent } from './home/home.component';
+import { AngularMaterialModule } from './material.module';
+import { FormComponent } from './component/form/form.component';
 
 
-const routes: Routes = []
+const routes: Routes =  [
+  { path: 'home', component: HomeComponent },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
+];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
@@ -24,6 +32,7 @@ const routes: Routes = []
     FormlyMaterialModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    AngularMaterialModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
